@@ -1,0 +1,191 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
+$color: steelblue;
+$background-dark: #000000;
+$white-color: white;
+$nav-bar-color: #202124;
+$text-hover-color: grey;
+
+body {
+  background-color: $background-dark;
+  color: $white-color;
+}
+
+.navigation-bar {
+  background-color: $nav-bar-color;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: $white-color 1px solid;
+  border-radius: 10px;
+
+}
+
+.navigation-bar * {
+  color: $white-color;
+}
+
+.navigation-bar a:hover,
+.navigation-bar a:focus,
+.navigation-bar a:active {
+  color: $text-hover-color;
+}
+
+.my-flix {
+  color: $color;
+}
+
+.movie-view-img {
+  max-height: 450px;
+  width: 100%;
+}
+
+.movie-card-img {
+  max-height: 450px;
+  width: 100%;
+}
+
+.edit-button {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.button-group-profile button {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.button-group-profile {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.search-bar {
+  margin: 0 1px;
+  border-radius: 5px;
+  border: $white-color 1px solid;
+}
+
+.form-input {
+  background-color: $nav-bar-color;
+  color: $white-color;
+}
+
+.form-input:focus {
+  background-color: $nav-bar-color;
+  color: $white-color;
+}
+
+.search-btn {
+  color: $background-dark;
+  margin-left: 3px;
+  border: $white-color 1px solid;
+  padding: 3px;
+  border-radius: 5px;
+  background-color: $white-color;
+}
+
+.search-btn:hover {
+  background-color: $text-hover-color;
+}
+
+.main-content {
+  display: flex;
+}
+
+.profile-card {
+  background-color: $nav-bar-color;
+  color: $white-color;
+}
+
+.movie-card {
+  display: flex;
+  background-color: $nav-bar-color;
+}
+
+.movie-card-img {
+  width: 200px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin: 10px;
+  align-self: center;
+}
+
+.movie-list {
+  display: grid;
+  grid-gap: 10px;
+  margin: 10px auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto-fill, 1fr);
+}
+
+.movie-view-description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie-view-img {
+  max-width: 300px;
+  max-height: 100%;
+}
+
+@media (max-width: 320px) {
+  .movie-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .movie-view-description {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 320px) {
+  .movie-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .movie-view-description {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 768px) {
+  .movie-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .movie-view-description {
+    display: flex;
+    flex-direction: row;
+  }
+  
+}
+
+@media (min-width: 920px) {
+  .movie-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .movie-view-description {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1200px) {
+  .movie-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .movie-view-description {
+    display: flex;
+    flex-direction: row;
+  }
+}
