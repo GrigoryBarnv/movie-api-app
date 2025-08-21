@@ -1,0 +1,25 @@
+{
+  "name": "movie-api-app",
+  "version": "1.0.0",
+  "description": "The **myFlix API** is the server-side component of a movies web application.   It provides users with access to information about movies, directors, and genres, while also allowing users to manage their profiles and favorite movie lists.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrigoryBarnv/movie-api-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/GrigoryBarnv/movie-api-app/issues"
+  },
+  "homepage": "https://github.com/GrigoryBarnv/movie-api-app#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0"
+  }
+}
