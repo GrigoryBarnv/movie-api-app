@@ -32,4 +32,5 @@ app.listen(8080, () => {
 });
 
 
-STOP AT MORGAN 
+STOP AT MORGAN  2 4 
+-rewrite code and figure 4 and 5 before 
