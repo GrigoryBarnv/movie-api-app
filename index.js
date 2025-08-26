@@ -15,22 +15,17 @@ app.use(myLogger);
 app.use(requestTime);
 
 app.get('/', (req, res) => {
-  let responseText = 'Welcome to my app!';
+  let responseText = 'Welcome to my App';
   responseText += '<small>Requested at: ' + req.requestTime + '</small>';
   res.send(responseText);
 });
 
 app.get('/secreturl', (req, res) => {
-  let responseText = 'This is a secret url with super top-secret content.';
+  let responseText = 'This is a secret url with super top secret content.';
   responseText += '<small>Requested at: ' + req.requestTime + '</small>';
   res.send(responseText);
-
 });
 
 app.listen(8080, () => {
-  console.log('Your app is listening on port 8080.');
+  console.log('Your app is listening on port 8080');  
 });
-
-
-STOP AT MORGAN  2 4 
--rewrite code and figure 4 and 5 before 
