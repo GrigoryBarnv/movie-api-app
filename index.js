@@ -1,34 +1,57 @@
-const express = require('express');
-const app = express();
+const bodyParser = require('body-parser');
+const express = require('express'); // load the express module
+const morgan = require('morgan');
+const path = require('path');
+const fs = require('fs');
 
-let myLogger = (req, res, next) => {
-  console.log(req.url);
-  next();
-};
+const app = express(); // create express app
 
-let requestTime = (req, res, next) => {
-  req.requestTime = Date.now();
-  next();
-};
+// middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-app.use(myLogger);
-app.use(requestTime);
+// --- Logging setup ---
+// 1) log to terminal
+app.use(morgan('common'));
+
+// 2) log to access.log file
+const accessLogStream = fs.createWriteStream(
+  path.join(__dirname, 'access.log'),
+  { flags: 'a' }
+);
+app.use(morgan('combined', { stream: accessLogStream }));
+
+const movies = [
+  { title: 'The Matrix', year: 1999 },
+  { title: 'Interception', year: 2010},
+  { title: 'Interstellar', year: 2014 },
+  { title: 'The Godfather', year: 1972 },
+  { title: 'The Dark Knight', year: 2008 },
+  { title: 'Pulp Fiction', year: 1994 },
+  { title: 'Fight Club', year: 1999 },
+  { title: 'Forrest Gump', year: 1994 },
+  { title: 'The Shawshank Redemption', year: 1994 },
+  { title: 'Parasite', year: 2019 }
+];
+
+
+
+
+app.get('/movies', (req, res) => {
+  res.json(movies);
+});
 
 app.get('/', (req, res) => {
-  let responseText = 'Welcome to my App';
-  responseText += '<small>Requested at: ' + req.requestTime + '</small>';
-  res.send(responseText);
-});
+  res.send('Thank you for visiting the movie app');
+})
 
-app.get('/secreturl', (req, res) => {
-  let responseText = 'This is a secret url with super top secret content.';
-  responseText += '<small>Requested at: ' + req.requestTime + '</small>';
-  res.send(responseText);
-});
+app.use(express.static('public'));
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+ });
 
 app.listen(8080, () => {
-  console.log('Your app is listening on port 8080');  
-});
-
-
-// DIREKT NACH DEM OBIGEN CODE WEITERLESEN !
+  console.log('Example app listening on port 8080!');
+})
