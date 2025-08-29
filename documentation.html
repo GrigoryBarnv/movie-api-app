@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie API Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .endpoint {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Movie API Documentation</h1>
+
+    <div class="endpoint">
+        <h2>POST /users</h2>
+        <p>Create a new user.</p>
+        <p><b>Method:</b> POST</p>
+        <p><b>URL:</b> <code>/users</code></p>
+        <p><b>Body:</b></p>
+        <pre>{
+  "name": "Alice",
+  "favoriteMovies": ["Inception", "Matrix"]
+}</pre>
+        <p><b>Response (201):</b></p>
+        <pre>{
+  "id": "056c5554-bde6-42f3-b832-2a3864bfc406",
+  "name": "Alice",
+  "favoriteMovies": ["Inception", "Matrix"]
+}</pre>
+    </div>
+
+    <div class="endpoint">
+        <h2>POST /users/:id/:movieTitle</h2>
+        <p>Add a movie to a user’s favorites.</p>
+        <p><b>Method:</b> POST</p>
+        <p><b>URL:</b> <code>/users/{id}/{movieTitle}</code></p>
+        <p><b>Path parameters:</b> <code>id</code> (string), <code>movieTitle</code> (string)</p>
+        <p><b>Response (200):</b></p>
+        <pre>"Inception has been added to user 056c5554's array"</pre>
+    </div>
+
+    <div class="endpoint">
+        <h2>DELETE /users/:id/:movieTitle</h2>
+        <p>Remove a movie from a user’s favorites.</p>
+        <p><b>Method:</b> DELETE</p>
+        <p><b>URL:</b> <code>/users/{id}/{movieTitle}</code></p>
+        <p><b>Response (200):</b></p>
+        <pre>"Inception has been removed from user 056c5554's array"</pre>
+    </div>
+
+    <div class="endpoint">
+        <h2>DELETE /users/:id</h2>
+        <p>Delete a user by ID.</p>
+        <p><b>Method:</b> DELETE</p>
+        <p><b>URL:</b> <code>/users/{id}</code></p>
+        <p><b>Response (200):</b></p>
+        <pre>"user 056c5554 has been removed"</pre>
+    </div>
+
+    <div class="endpoint">
+        <h2>GET /movies/:title</h2>
+        <p>Get movie details by title.</p>
+        <p><b>Method:</b> GET</p>
+        <p><b>URL:</b> <code>/movies/{title}</code></p>
+        <p><b>Response (200):</b></p>
+        <pre>{
+  "Title": "Inception",
+  "Genre": { "Name": "Sci-Fi" },
+  "Director": { "Name": "Christopher Nolan" }
+}</pre>
+    </div>
+
+    <div class="endpoint">
+        <h2>GET /movies/genre/:genreName</h2>
+        <p>Get details about a genre.</p>
+        <p><b>Method:</b> GET</p>
+        <p><b>URL:</b> <code>/movies/genre/{genreName}</code></p>
+        <p><b>Response (200):</b></p>
+        <pre>{ "Name": "Sci-Fi" }</pre>
+    </div>
+
+    <div class="endpoint">
+        <h2>GET /movies/director/:directorName</h2>
+        <p>Get details about a director.</p>
+        <p><b>Method:</b> GET</p>
+        <p><b>URL:</b> <code>/movies/director/{directorName}</code></p>
+        <p><b>Response (200):</b></p>
+        <pre>{ "Name": "Christopher Nolan" }</pre>
+    </div>
+
+</body>
+
+</html>

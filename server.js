@@ -2,6 +2,11 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const uuid = require('uuid');  // ✅ correct way
+const path = require('path');
+
+//Documentation packages
+const swaggerUi = require('swagger-ui-express');
+const swaggerJsdoc = require('swagger-jsdoc');
 
 
 app.use(bodyParser.json()); 
@@ -11,9 +16,41 @@ let users = [];
 let movies = [];
 
 
+// Serve documentation.html at /documentation
+app.get('/documentation', (req, res) => {
+  res.sendFile(path.join(__dirname, 'documentation.html'));
+});
 
-
-
+/**
+ * @openapi
+ * /users:
+ *   post:
+ *     summary: Create a new user
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - name
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 example: Alice
+ *               favoriteMovies:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *                 example: ["Inception", "Matrix"]
+ *     responses:
+ *       201:
+ *         description: User created successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/User'
+ */
 //CREATE
 app.post('/users', (req, res) => {
   const newUser = req.body;
@@ -27,7 +64,26 @@ app.post('/users', (req, res) => {
   }
 });
 
-
+/**
+ * @openapi
+ * /users/{id}/{movieTitle}:
+ *   post:
+ *     summary: Add a movie to a user's favorite list
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *       - in: path
+ *         name: movieTitle
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Movie added successfully
+ */
 //CREATE
 app.post('/users/:movieTitle', (req, res) => {
   const {id, movieTitle} = req.params;
@@ -46,7 +102,21 @@ app.post('/users/:movieTitle', (req, res) => {
 })
 
 
-
+/**
+ * @openapi
+ * /users/{id}:
+ *   delete:
+ *     summary: Delete a user by ID
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: User deleted successfully
+ */
 //DELETE 
 app.delete('/users/:movieTitle', (req, res) => {
   const {id, movieTitle} = req.params;
@@ -83,7 +153,21 @@ app.delete('/users/:id', (req, res) => {
 })
 
 
-
+/**
+ * @openapi
+ * /movies/{title}:
+ *   get:
+ *     summary: Get details about a movie by its title
+ *     parameters:
+ *       - in: path
+ *         name: title
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Movie object
+ */
 //READ
 app.get('/movies/:title', (req, res) => {
   const title = req.params.title;
@@ -123,6 +207,70 @@ app.get('/movies/director/:directorName', (req, res) => {
 
 
 
+// Swagger setup
+const swaggerOptions = {
+  definition: {
+    openapi: "3.0.0",
+    info: {
+      title: "Movie API",
+      version: "1.0.0",
+      description: "API for managing users and movies"
+    },
+    servers: [
+      {
+        url: "http://localhost:8080"
+      }
+    ]
+  },
+  apis: ["./server.js"], // path to your file with @openapi comments
+};
+
+const swaggerSpec = swaggerJsdoc(swaggerOptions);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
+
 app.listen(8080, () => {
   console.log('Example app listening on port 8080!');
 });
+
+
+/**
+ * @openapi
+ * components:
+ *   schemas:
+ *     User:
+ *       type: object
+ *       properties:
+ *         id:
+ *           type: string
+ *           example: "056c5554-bde6-42f3-b832-2a3864bfc406"
+ *         name:
+ *           type: string
+ *           example: "Alice"
+ *         favoriteMovies:
+ *           type: array
+ *           items:
+ *             type: string
+ *           example: ["Inception", "Matrix"]
+ *     Movie:
+ *       type: object
+ *       properties:
+ *         Title:
+ *           type: string
+ *           example: "Inception"
+ *         Genre:
+ *           type: object
+ *           properties:
+ *             Name:
+ *               type: string
+ *               example: "Sci-Fi"
+ *         Director:
+ *           type: object
+ *           properties:
+ *             Name:
+ *               type: string
+ *               example: "Christopher Nolan"
+ */
+
+// Open http://localhost:8080/api-docs to see the documentation
+
