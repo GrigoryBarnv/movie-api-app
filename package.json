@@ -4,7 +4,9 @@
   "description": "The **myFlix API** is the server-side component of a movies web application.   It provides users with access to information about movies, directors, and genres, while also allowing users to manage their profiles and favorite movie lists.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,11 @@
   "dependencies": {
     "body-parser": "^2.2.0",
     "express": "^5.1.0",
-    "morgan": "^1.10.1"
+    "morgan": "^1.10.1",
+    "uuid": "^11.1.0",
+    "uuidv4": "^6.2.13"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
