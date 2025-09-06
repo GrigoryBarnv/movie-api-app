@@ -31,5 +31,3 @@ let User = mongoose.model('User', userSchema);
 module.exports.Movie = Movie;
 module.exports.User = User;
 
-
-2.8 - Creation of the Models
