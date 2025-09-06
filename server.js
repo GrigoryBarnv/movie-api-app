@@ -18,6 +18,8 @@ const Users = Models.User;
 
 app.use(bodyParser.json()); 
 
+
+//edit later to replace with database
 let users = [];
 
 let movies = [];
