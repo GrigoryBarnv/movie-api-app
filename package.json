@@ -1,29 +1,43 @@
 {
-  "name": "myflix-client",
-  "version": "1.0.0",
-  "description": "пїЅпїЅ#\u0000 \u0000m\u0000y\u0000F\u0000l\u0000i\u0000x\u0000-\u0000c\u0000l\u0000i\u0000e\u0000n\u0000t\u0000\r\u0000 \u0000",
-  "scripts": {"start": "parcel src/index.html", "build": "parcel build src/index.html --dist-dir dist --public-url ./", "build:gh": "parcel build src/index.html --dist-dir dist --public-url /movie-api-app/", "predeploy": "npm run build:gh && copy dist\\index.html dist\\404.html", "deploy": "gh-pages -d dist", "test": "echo \"Error: no test specified\" && exit 1"},
-  "repository": {"type": "git", "url": "git+https://github.com/GrigoryBarnv/movie-api-app.git"},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {"url": "https://github.com/GrigoryBarnv/movie-api-app/issues"},
-  "homepage": "https://grigorybarnv.github.io/movie-api-app/",
-  "dependencies": {
-    "@reduxjs/toolkit": "^1.9.2",
-    "bootstrap": "^5.2.3",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.7.0",
-    "react-dom": "^18.2.0",
-    "react-redux": "^8.0.5",
-    "react-router": "^6.7.0",
-    "react-router-dom": "^6.7.0"
-  },
-  "devDependencies": {
-    "@parcel/transformer-sass": "^2.8.2",
-    "parcel": "^2.8.2",
-    "process": "^0.11.10", "gh-pages": "^6.1.1"
-  }
-}
+    "name":  "myflix-client",
+    "version":  "1.0.0",
+    "description":  "РїС—Р…РїС—Р…#\u0000 \u0000m\u0000y\u0000F\u0000l\u0000i\u0000x\u0000-\u0000c\u0000l\u0000i\u0000e\u0000n\u0000t\u0000\r\u0000 \u0000",
+    "scripts":  {
+                    "start":  "parcel src/index.html",
+                    "build":  "parcel build src/index.html --dist-dir dist --public-url ./",
+                    "build:gh":  "parcel build src/index.html --dist-dir dist --public-url /movie-api-app/",
+                    "predeploy":  "npm run build:gh \u0026\u0026 xcopy src\\assets\\posters dist\\assets\\posters /E /I /Y \u003enul \u0026\u0026 copy dist\\index.html dist\\404.html",
+                    "deploy":  "gh-pages -d dist",
+                    "test":  "echo \"Error: no test specified\" \u0026\u0026 exit 1"
+                },
+    "repository":  {
+                       "type":  "git",
+                       "url":  "git+https://github.com/GrigoryBarnv/movie-api-app.git"
+                   },
+    "keywords":  [
 
+                 ],
+    "author":  "",
+    "license":  "ISC",
+    "bugs":  {
+                 "url":  "https://github.com/GrigoryBarnv/movie-api-app/issues"
+             },
+    "homepage":  "https://grigorybarnv.github.io/movie-api-app/",
+    "dependencies":  {
+                         "@reduxjs/toolkit":  "^1.9.2",
+                         "bootstrap":  "^5.2.3",
+                         "prop-types":  "^15.8.1",
+                         "react":  "^18.2.0",
+                         "react-bootstrap":  "^2.7.0",
+                         "react-dom":  "^18.2.0",
+                         "react-redux":  "^8.0.5",
+                         "react-router":  "^6.7.0",
+                         "react-router-dom":  "^6.7.0"
+                     },
+    "devDependencies":  {
+                            "@parcel/transformer-sass":  "^2.8.2",
+                            "parcel":  "^2.8.2",
+                            "process":  "^0.11.10",
+                            "gh-pages":  "^6.1.1"
+                        }
+}
