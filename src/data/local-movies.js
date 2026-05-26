@@ -6,7 +6,7 @@ export const localMovies = [
     Genre: { Name: 'Drama', Description: 'Drama movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1600771.jpg',
-    Featured: True.ToLower()
+    Featured: true
   },
   {
     id: 'tmdb-1228710',
@@ -15,7 +15,7 @@ export const localMovies = [
     Genre: { Name: 'Action', Description: 'Action movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1228710.jpg',
-    Featured: True.ToLower()
+    Featured: true
   },
   {
     id: 'tmdb-755898',
@@ -24,7 +24,7 @@ export const localMovies = [
     Genre: { Name: 'Science Fiction', Description: 'Science Fiction movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-755898.jpg',
-    Featured: True.ToLower()
+    Featured: true
   },
   {
     id: 'tmdb-980477',
@@ -33,7 +33,7 @@ export const localMovies = [
     Genre: { Name: 'Animation', Description: 'Animation movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-980477.jpg',
-    Featured: True.ToLower()
+    Featured: true
   },
   {
     id: 'tmdb-1292415',
@@ -42,7 +42,7 @@ export const localMovies = [
     Genre: { Name: 'Action', Description: 'Action movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1292415.jpg',
-    Featured: True.ToLower()
+    Featured: true
   },
   {
     id: 'tmdb-1226863',
@@ -51,7 +51,7 @@ export const localMovies = [
     Genre: { Name: 'Family', Description: 'Family movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1226863.jpg',
-    Featured: True.ToLower()
+    Featured: true
   },
   {
     id: 'tmdb-1327819',
@@ -60,7 +60,7 @@ export const localMovies = [
     Genre: { Name: 'Adventure', Description: 'Adventure movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1327819.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-1628367',
@@ -69,16 +69,16 @@ export const localMovies = [
     Genre: { Name: 'Crime', Description: 'Crime movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1628367.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-1368166',
     Title: 'The Housemaid',
-    Description: 'Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerous—a sexy, seductive game of secrets, scandal, and power.',
+    Description: 'Trying to escape her past, Millie Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew Winchester. But what begins as a dream job quickly unravels into something far more dangerousвЂ”a sexy, seductive game of secrets, scandal, and power.',
     Genre: { Name: 'Mystery', Description: 'Mystery movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1368166.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-1582770',
@@ -87,7 +87,7 @@ export const localMovies = [
     Genre: { Name: 'Action', Description: 'Action movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1582770.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-44980',
@@ -96,7 +96,7 @@ export const localMovies = [
     Genre: { Name: 'Action', Description: 'Action movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-44980.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-249397',
@@ -105,16 +105,16 @@ export const localMovies = [
     Genre: { Name: 'Drama', Description: 'Drama movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-249397.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-1266127',
     Title: 'Ready or Not: Here I Come',
-    Description: 'Moments after surviving an all-out attack from the Le Domas family, Grace discovers she’s reached the next level of the nightmarish game — and this time with her estranged sister Faith at her side. Grace has one chance to survive, keep her sister alive, and claim the High Seat of the Council that controls the world. Four rival families are hunting her for the throne, and whoever wins rules it all.',
+    Description: 'Moments after surviving an all-out attack from the Le Domas family, Grace discovers sheвЂ™s reached the next level of the nightmarish game вЂ” and this time with her estranged sister Faith at her side. Grace has one chance to survive, keep her sister alive, and claim the High Seat of the Council that controls the world. Four rival families are hunting her for the throne, and whoever wins rules it all.',
     Genre: { Name: 'Thriller', Description: 'Thriller movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1266127.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-936075',
@@ -123,7 +123,7 @@ export const localMovies = [
     Genre: { Name: 'Music', Description: 'Music movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-936075.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-1330021',
@@ -132,7 +132,7 @@ export const localMovies = [
     Genre: { Name: 'Drama', Description: 'Drama movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1330021.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-1301421',
@@ -141,7 +141,7 @@ export const localMovies = [
     Genre: { Name: 'Comedy', Description: 'Comedy movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1301421.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-1673393',
@@ -150,7 +150,7 @@ export const localMovies = [
     Genre: { Name: 'Adventure', Description: 'Adventure movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1673393.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-1196067',
@@ -159,7 +159,7 @@ export const localMovies = [
     Genre: { Name: 'Science Fiction', Description: 'Science Fiction movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1196067.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-1419406',
@@ -168,7 +168,7 @@ export const localMovies = [
     Genre: { Name: 'Action', Description: 'Action movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1419406.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-1311031',
@@ -177,7 +177,7 @@ export const localMovies = [
     Genre: { Name: 'Animation', Description: 'Animation movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1311031.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-1367220',
@@ -186,7 +186,7 @@ export const localMovies = [
     Genre: { Name: 'Fantasy', Description: 'Fantasy movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1367220.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-157336',
@@ -195,7 +195,7 @@ export const localMovies = [
     Genre: { Name: 'Adventure', Description: 'Adventure movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-157336.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-1318447',
@@ -204,7 +204,7 @@ export const localMovies = [
     Genre: { Name: 'Action', Description: 'Action movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1318447.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-1630423',
@@ -213,7 +213,7 @@ export const localMovies = [
     Genre: { Name: 'Action', Description: 'Action movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1630423.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-1431071',
@@ -222,7 +222,7 @@ export const localMovies = [
     Genre: { Name: 'Thriller', Description: 'Thriller movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1431071.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-28322',
@@ -231,7 +231,7 @@ export const localMovies = [
     Genre: { Name: 'Thriller', Description: 'Thriller movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-28322.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-687163',
@@ -240,7 +240,7 @@ export const localMovies = [
     Genre: { Name: 'Science Fiction', Description: 'Science Fiction movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-687163.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-1320660',
@@ -249,7 +249,7 @@ export const localMovies = [
     Genre: { Name: 'Comedy', Description: 'Comedy movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1320660.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-1523145',
@@ -258,7 +258,7 @@ export const localMovies = [
     Genre: { Name: 'Romance', Description: 'Romance movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1523145.jpg',
-    Featured: False.ToLower()
+    Featured: false
   },
   {
     id: 'tmdb-1426822',
@@ -267,6 +267,6 @@ export const localMovies = [
     Genre: { Name: 'Horror', Description: 'Horror movies' },
     Director: { Name: 'TMDB Data', Bio: 'Director information can be added later.', Birth: '1900-01-01', Death: null },
     ImagePath: '/movie-api-app/assets/posters/movie-1426822.jpg',
-    Featured: False.ToLower()
+    Featured: false
   }
 ];
