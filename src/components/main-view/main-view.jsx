@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import { MovieCard } from "../movie-card/movie-card";
 import { MovieView } from "../movie-view/movie-view";
 import { LoginView } from "../login-view/login-view";
@@ -6,7 +6,7 @@ import { SignupView } from "../signup-view/signup-view";
 import { NavigationBar } from "../navigation-bar/navigation-bar";
 import { ProfileView } from "../profile-view/profile-view";
 import { Col, Container, Row, Button } from "react-bootstrap";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import { SearchView } from "../search-view/search-view";
 import { useSelector, useDispatch } from "react-redux";
 import { setUser } from "../../redux/actions/userActions";
@@ -78,7 +78,7 @@ export const MainView = () => {
 
 
   return (
-        <BrowserRouter>
+        <HashRouter>
         <div className="main-container">
         <Container>
         <NavigationBar />
@@ -185,6 +185,6 @@ export const MainView = () => {
             </Routes>
             </Container>
         </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
